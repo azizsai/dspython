@@ -61,6 +61,27 @@ class BD:
 
 
 
+class BibDeClasse:
+    def __init__(self):
+        self.bibliotheque = []
+    
+    def ajouter(self, oeuvre):
+        if oeuvre not in self.bibliotheque:
+            self.bibliotheque.append(oeuvre)
+        else :
+            print("L'oeuvre existe déjà")
+    
+    def supprimer(self, oeuvre):
+        if oeuvre in self.bibliotheque:
+            self.bibliotheque.remove(oeuvre)
+        else :
+            print("L'oeuvre n'existe pas")
+            
+    def afficher(self):
+        for x in self.bibliotheque :
+           print(x)  
+
+
 
 hp = Livre("Harry Potter", "J. K. Rowling", 79.9, 350)
 print(hp)
